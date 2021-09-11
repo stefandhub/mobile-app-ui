@@ -1,0 +1,43 @@
+
+body {
+    margin: 0px;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+}
+
+.main__content{
+    width: 375px;
+    height: 800px;
+    background-color: #f9f9f9;
+    position: fixed;
+}
+
+.text__container {
+    position: relative;
+    margin-top: 17.22%;
+    margin-left: 10.6%;
+}
+
+.text__1 {
+    font-weight: 450;
+    font-size: 30px;
+}
+
+.text__2 {
+    font-weight: 450;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 8px;
+}
+
+.page__1__button {
+    background-color: #EF716B;
+    width: 145px;
+    height: 40px;
+    border-radius: 35px;
+    border: none;
+    color: #f9f9f9;
+    font-size: 16px;
+    margin-top: 15px;
+}
