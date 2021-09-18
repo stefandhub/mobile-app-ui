@@ -189,3 +189,88 @@ body {
 .doctor__image {
     margin-left: 20px;
 }
+
+/*page 3*/
+
+#page__3 {
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-image: url("/images/page__3__background.jpg");
+    display: none;
+}
+
+.doctor__info__container {
+    margin-top: 249px;
+    width: 100vw;
+    height: 625px;
+    background: #F9F9F9;
+    box-shadow: 0px -2px 17px rgba(0, 0, 0, 0.04);
+    border-radius: 42px;
+}
+
+.info__and__contacts {
+    display: flex;
+    margin-left:  25px;
+    padding-top: 25px;
+}
+
+#doctor__info-image {
+    width: 88px;
+    height: 107px;
+}
+.doctor__info {
+    height: 90px;   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    left: 140px;
+    top: 290px;
+}
+
+.doctor__info-text {
+    margin-top: 37px;
+    margin-left: 25px;
+}
+
+#doctor__info-name {
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 24px;
+    color: #1E1C61;
+}
+
+#doctor__info-other {
+    font-weight: 450;
+    font-size: 14px;
+    line-height: 24px;
+    color: #1E1C61A6;
+
+}
+
+#doctor__info-contacts {
+    margin-top: 7px;
+    
+}
+
+.section__name {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: #1E1C61;
+
+}
+
+#about__doctor-text {
+    font-weight: 450;
+    font-size: 14px;
+    line-height: 22px;
+    color: #1E1C61A6;
+    margin-top: 12px;
+    margin-right: 21px;
+}
+
+.upcoming__schedules__container {
+    margin: 21px 0px 0px 25px;
+}
