@@ -100,3 +100,9 @@ function doctorDetails (){
     })
 
 }
+
+document.getElementById("page__3-back").addEventListener("click", backToPage2);
+function backToPage2 (){
+    page3.style.display = "none";
+    page2.style.display = "block";
+}

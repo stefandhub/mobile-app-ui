@@ -46,7 +46,7 @@ body {
 }
 .page__1__image img {
     margin-top: 25px;
-    width: 375px;
+    width: 100vw;
     height: 478px;
 }
 #page__1__button:hover{
@@ -195,13 +195,21 @@ body {
 #page__3 {
     width: 100vw;
     height: 100vh;
+    background-size: 100vw;
     background-repeat: no-repeat;
     background-image: url("/images/page__3__background.jpg");
     display: none;
 }
 
+.page__3-topbar {
+    width: 86%;
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0px 0px 24px;
+}
+
 .doctor__info__container {
-    margin-top: 249px;
+    margin-top: 219px;
     width: 100vw;
     height: 625px;
     background: #F9F9F9;
