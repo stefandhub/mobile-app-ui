@@ -28,6 +28,7 @@ body {
 .text__1 {
     font-weight: 450;
     font-size: 30px;
+    color: #1E1C61;
 }
 
 .text__2 {
@@ -35,6 +36,7 @@ body {
     font-size: 16px;
     line-height: 24px;
     margin-top: 14px;
+    color: rgba(30, 28, 97, 0.65);
 }
 
 #page__1__button {
