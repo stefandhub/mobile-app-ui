@@ -200,7 +200,7 @@ function searchDoctor () {
     let filteredDoctors = document.getElementsByClassName("doctor__box");
     
     for (i = 0; i < doctors.length; i++) {
-        if (doctors[i].type.toUpperCase().includes(searchbar.value.toUpperCase())){
+        if (doctors[i].type.toUpperCase().includes(searchbar.value.toUpperCase()) || doctors[i].name.toUpperCase().includes(searchbar.value.toUpperCase())){
             filteredDoctors[i].style.display = ""
         } else {
             filteredDoctors[i].style.display = "none"}
