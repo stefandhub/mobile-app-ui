@@ -1,15 +1,5 @@
-const deviceType = () => {
-    const ua = navigator.userAgent;
-    if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
-        console.log("tablet");
-        alert("This is a mobile-only app. Please use a mobile device to consult this app")
-    }
-    else if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
-        return console.log("mobile");
-    }
-    console.log("desktop");
-    alert("This is a mobile-only app. Please use a mobile device to consult this app")
-};
+
+//create doctors objects with infos
 let page1 = document.getElementById("page__1");
 let page2 = document.getElementById("page__2");
 let page3 = document.getElementById("page__3")
@@ -33,6 +23,7 @@ console.log(doctors);
 
 const backgroundColors = ["#EDF1FA", "#FAF2EA", "#F9EDEB"];
 
+//go to the second page and populate it
 function goToNextPage () {  
     
     page1.style.display = "none";
@@ -67,7 +58,7 @@ function goToNextPage () {
 }
 console.log(doctors);
 
-deviceType();     
+//create doctors' details and schedule page
 
 let name = document.getElementById("doctor__info-name");
 let info = document.getElementById("doctor__info-other");
@@ -102,12 +93,15 @@ function doctorDetails (){
     })
 }
 
+//back from details page to page 2
 document.getElementById("page__3-back").addEventListener("click", backToPage2);
 function backToPage2 (){
     page3.style.display = "none";
     page2.style.display = "block";
 }
 
+
+//filter doctors for category
 
 let dentalSurgeon = document.getElementById("dental");
 let heartSurgeon = document.getElementById ("heart");
@@ -191,9 +185,42 @@ function eyeFilter () {
     resetFilter.className = "reset__button";
 }
 
+//reset filter function
+
 function reset() {
     doctorCard = document.getElementsByClassName("doctor__box");
     for (i = 0; i < doctors.length; i++) {
         doctorCard[i].style.display = ""
         resetFilter.style.display = "none"
     }}
+
+//filter doctor by searchbar
+function searchDoctor () {
+    const searchbar = document.getElementById("search__doctor");
+    let filteredDoctors = document.getElementsByClassName("doctor__box");
+    
+    for (i = 0; i < doctors.length; i++) {
+        if (doctors[i].type.toUpperCase().includes(searchbar.value.toUpperCase())){
+            filteredDoctors[i].style.display = ""
+        } else {
+            filteredDoctors[i].style.display = "none"}
+    }
+}
+
+document.getElementById("search__icon").addEventListener("click", searchDoctor)
+
+//understand what kind of device the user is using and limit the consultation only from mobile devices
+    const deviceType = () => {
+        const ua = navigator.userAgent;
+        if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+            console.log("tablet");
+            alert("This is a mobile-only app. Please use a mobile device to consult this app")
+        }
+        else if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
+            return console.log("mobile");
+        }
+        console.log("desktop");
+        alert("This is a mobile-only app. Please use a mobile device to consult this app")
+    };
+
+    deviceType();     
