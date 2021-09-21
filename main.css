@@ -46,7 +46,7 @@ body {
 }
 .page__1__image img {
     margin-top: 25px;
-    width: 100vw;
+    max-width: 375px;
     height: 478px;
 }
 #page__1__button:hover{
